@@ -1,6 +1,6 @@
 ### Install Docker ###
 
-Official **[Install Guide](https://docs.docker.com/engine/install/debian/#install-using-the-repository)**
+Official *[Install Guide](https://docs.docker.com/engine/install/debian/#install-using-the-repository)*
 
 #### Set up Docker's **apt** repositotr ####  
 
