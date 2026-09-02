@@ -1,3 +1,28 @@
+### Install Docker ###
+
+#### Set up Docker's **apt** repositotr ####  
+
+`sudo apt update`
+`sudo apt install ca-certificates curl`
+`sudo install -m 0755 -d /etc/apt/keyrings`
+`sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc`
+`sudo chmod a+r /etc/apt/keyrings/docker.asc`
+
+#### Add the repository to apt sources ####
+	sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+		Types: deb
+		URIs: https://download.docker.com/linux/debian
+		Suites: $(. /etc/os-release && echo "$VERSION_CODENAME")
+		Components: stable
+		Architectures: $(dpkg --print-architecture)
+		Signed-By: /etc/apt/keyrings/docker.asc
+	EOF
+
+`sudo apt update`
+
+
+
+
 # Header 1 # 
 **Bold**
 
@@ -20,15 +45,12 @@ List
 - 2
 - 3
 
+sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-doc docker-buildx podman-docker containerd runc | cut -f1)
 
-
-	#apt install sudo -y#
-	
-	apt update
-	
-	usermod -aG sudo $USER
-
-	nano /etc/network/interfaces
+`apt install sudo -y`
+`apt update`
+`usermod -aG sudo $USER`
+`nano /etc/network/interfaces`
 
 	auto ens18
     iface ens18 inet static
@@ -37,22 +59,23 @@ List
         gateway 10.0.0.1
         dns-nameservers 1.1.1.1 8.8.8.8
 
-systemctl restart networking
+
+`systemctl restart networking`
 
 # ssh into command prompt #
 ssh {user}@{IP}
 
 # Helpful Tools to install #
-sudo apt install -y curl net-tools wget git htop unzip zip ca-certificates gnupg tree
-sudo apt update
+`sudo apt install -y curl net-tools wget git htop unzip zip ca-certificates gnupg tree`
+`sudo apt update`
 
 
 # General Docker Install #
-$ mkdir docker $  
-cd docker
+`mkdir docker`
+`cd docker`
 
 
-sudo install -m 0755 -d /etc/apt/keyrings
+`sudo install -m 0755 -d /etc/apt/keyrings`
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
