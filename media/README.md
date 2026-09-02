@@ -3,16 +3,12 @@
 
 Official *[Install Guide](https://docs.docker.com/engine/install/debian/#install-using-the-repository)*
 
-### Uninstall old versions ###
+### 1. Uninstall old versions ###
 ```
 sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-doc docker-buildx podman-docker containerd runc | cut -f1)
 ```
 
-
-
-### 1. Set up Docker's apt repository ###
-
-1. ### Set up Docker's apt repository ###
+### 2. Set up Docker's apt repository ###
 
 Add Docker's official GPG key
 ```
@@ -36,20 +32,29 @@ EOF
 ```
 
 
-#### Install the Docker packages ####
+### 3. Install the Docker packages ###
 
 ```
 sudo apt update && \
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
+
 Verify docker is running
 ```
 sudo systemctl status docker
 ```
-
+If not start it manually
+```
 sudo systemctl start docker
+```
+### 4. Verify that the installation is successful by running the `hello-world` image ###
+
+```
 sudo docker run hello-world
 ```
+
+
+
 
 
 
