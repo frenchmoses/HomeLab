@@ -20,16 +20,14 @@ systemctl restart networking
 ssh {user}@{IP}
 
 # Helpful Tools to install #
-sudo apt install -y curl net-tools wget git htop unzip zip ca-certificates gnupg lsb-release iputils-ping traceroute dnsutils tree
+sudo apt install -y curl net-tools wget git htop unzip zip ca-certificates gnupg tree
 sudo apt update
 
 
 # General Docker Install #
-mkdir docker
+$ mkdir docker $
 cd docker
 
-sudo apt update
-sudo apt install ca-certificates curl gnupg
 
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
