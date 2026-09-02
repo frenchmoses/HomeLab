@@ -1,10 +1,17 @@
 # Header 1 # 
-## Header 2 ## 
-### Header 3 ### 
-
 **Bold**
+
+## Header 2 ## 
 *Italics*
+
+### Header 3 ### 
 ***Bold Italics***
+
+testing 
+	code snippet
+conmtiunef
+
+
 
 List
 - 1
