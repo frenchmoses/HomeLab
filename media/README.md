@@ -1,6 +1,6 @@
-#Header 1#
-##Header 2##
-###Header 3###
+# Header 1 # 
+## Header 2 ## 
+### Header 3 ### 
 
 **Bold**
 *Italics*
@@ -8,18 +8,10 @@
 
 List
 - 1
-	* 1.1
-	* 1.2
+	- 1.1
+	- 1.2
 - 2
 - 3
-
-* 1
-* 2
-* 3
-
-+ 1
-+ 2
-+ 3
 
 
 
