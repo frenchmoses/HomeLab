@@ -1,3 +1,27 @@
+#Header 1#
+##Header 2##
+###Header 3###
+
+**Bold**
+*Italics*
+***Bold Italics***
+
+List
+- 1
+	* 1.1
+	* 1.2
+- 2
+- 3
+
+* 1
+* 2
+* 3
+
++ 1
++ 2
++ 3
+
+
 
 	#apt install sudo -y#
 	
