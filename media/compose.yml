@@ -15,7 +15,7 @@ services:
       - /dev/net/tun:/dev/net/tun
     networks:
       arr_network:
-        ipv4_address: ${SET_IP_GLUETUN}
+        ipv4_address: ${IP_GLUETUN}
     ports:
       - 8080:8080 # qbittorrent web interface
       - 6881:6881 # qbittorrent torrent port
@@ -122,7 +122,7 @@ services:
       - 8989:8989
     networks:
       arr_network:
-        ipv4_address: ${SET_IP_SONARR}
+        ipv4_address: ${IP_SONARR}
 
   radarr:
     image: lscr.io/linuxserver/radarr:latest
@@ -140,7 +140,7 @@ services:
       - 7878:7878
     networks:
       arr_network:
-        ipv4_address: ${SET_IP_RADARR}
+        ipv4_address: ${IP_RADARR}
 
   lidarr:
     container_name: lidarr
@@ -158,7 +158,7 @@ services:
       - 8686:8686
     networks:
       arr_network:
-        ipv4_address: ${SET_IP_LIDARR}
+        ipv4_address: ${IP_LIDARR}
 
   bazarr:
     image: lscr.io/linuxserver/bazarr:latest
@@ -176,7 +176,7 @@ services:
       - 6767:6767
     networks:
       arr_network:
-        ipv4_address: ${SET_IP_BAZARR}
+        ipv4_address: ${IP_BAZARR}
 
   seerr:
     container_name: seerr
@@ -199,7 +199,7 @@ services:
       - 5055:5055
     networks:
       arr_network:
-        ipv4_address: ${SET_IP_SEERR}
+        ipv4_address: ${IP_SEERR}
 
   npm:
     image: jc21/nginx-proxy-manager:latest
@@ -222,4 +222,4 @@ services:
       - 81:81
     networks:
       arr_network:
-        ipv4_address: ${SET_IP_NPM}
+        ipv4_address: ${IP_NPM}
