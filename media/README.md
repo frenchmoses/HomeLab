@@ -10,9 +10,9 @@ sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-doc dock
 
 #### Install using the apt repository ####
 
-###### 1. Set up Docker's apt repository #######
+#### 1. Set up Docker's apt repository #####
 
-1. ###### Set up Docker's apt repository #######
+1. #### Set up Docker's apt repository #####
 
 Add Docker's official GPG key
 ```
@@ -36,7 +36,8 @@ EOF
 ```
 
 
-###### Install the Docker packages ######
+#### Install the Docker packages ####
+
 ```
 sudo apt update && \
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
