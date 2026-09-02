@@ -8,7 +8,7 @@
 ***Bold Italics***
 
 testing  
-	code snippet  
+	`code` snippet  
 conmtiunef  
 
 
