@@ -7,9 +7,15 @@ Official *[Install Guide](https://docs.docker.com/engine/install/debian/#install
 ```
 sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-doc docker-buildx podman-docker containerd runc | cut -f1)
 ```
-#### Install using the `apt` repository ####
-1. Set up Docker's `apt` repository
-```bash
+
+#### Install using the apt repository ####
+
+###### 1. Set up Docker's apt repository #######
+
+1. ###### Set up Docker's apt repository #######
+
+Add Docker's official GPG key
+```
 sudo apt update && \
 sudo apt install ca-certificates curl && \
 sudo install -m 0755 -d /etc/apt/keyrings && \
@@ -17,8 +23,8 @@ sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyring
 sudo chmod a+r /etc/apt/keyrings/docker.asc  
 ```
 
-2. #### Add the repository to apt sources ####
-```bash
+Add the repository to apt sources
+```
 sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
 	Types: deb
 	URIs: https://download.docker.com/linux/debian
@@ -29,12 +35,17 @@ sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
 EOF
 ```
 
-```bash
+
+###### Install the Docker packages ######
+```
 sudo apt update && \
-
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
+```
+Verify docker is running
+```
 sudo systemctl status docker
+```
+
 sudo systemctl start docker
 sudo docker run hello-world
 ```
