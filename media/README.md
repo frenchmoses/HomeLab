@@ -1,11 +1,13 @@
 
-#apt install sudo -y#
-apt update
-usermod -aG sudo $USER
+	#apt install sudo -y#
+	
+	apt update
+	
+	usermod -aG sudo $USER
 
-nano /etc/network/interfaces
+	nano /etc/network/interfaces
 
-    auto ens18
+	auto ens18
     iface ens18 inet static
         address 10.0.0.X
 	netmask 255.255.255.0
