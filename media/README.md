@@ -1,18 +1,18 @@
 
-## Install Docker ##
+# Install Docker #
 
 Official *[Install Guide](https://docs.docker.com/engine/install/debian/#install-using-the-repository)*
 
-#### Uninstall old versions ####
+### Uninstall old versions ###
 ```
 sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-doc docker-buildx podman-docker containerd runc | cut -f1)
 ```
 
-#### Install using the apt repository ####
 
-#### 1. Set up Docker's apt repository #####
 
-1. #### Set up Docker's apt repository #####
+### 1. Set up Docker's apt repository ###
+
+1. ### Set up Docker's apt repository ###
 
 Add Docker's official GPG key
 ```
