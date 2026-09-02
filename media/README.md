@@ -7,9 +7,9 @@
 ### Header 3 ### 
 ***Bold Italics***
 
-testing 
-	code snippet
-conmtiunef
+testing  
+	code snippet  
+conmtiunef  
 
 
 
@@ -48,7 +48,7 @@ sudo apt update
 
 
 # General Docker Install #
-$ mkdir docker $
+$ mkdir docker $  
 cd docker
 
 
