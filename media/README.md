@@ -103,29 +103,25 @@ sudo usermod -aG docker $USER && newgrp docker
 ```
 Create a `docker` directory, change into it, and assigned persmissions
 ```
-mkdir /docker && cd /docker
-sudo chown -R 1000:1000 /docker
+mkdir /docker && cd /docker && sudo chown -R 1000:1000 /docker
 ```
 Grab the `docker-compose` and `.env.template` file from this repo. The `.env` file is what docker will you use and what you will modify. The template is a safe backup. 
 ```
-wget https://github.com/frenchmoses/homelab/blob/main/media/compose.yaml
-wget https://github.com/frenchmoses/homelab/blob/main/media/.env.template
-cp .env.template .env
+wget https://github.com/frenchmoses/homelab/blob/main/media/compose.yaml && \
+wget https://github.com/frenchmoses/homelab/blob/main/media/.env.template && \
+cp .env.template .env && \
 chmod 600 .env
 ```
-create the `/data` pathing and assign permissions
+Create the `/data` pathing and assign permissions
 ```
-sudo mkdir -p /data/{media/{tv,movies,music,books},downloads/{complete/{tv,movies,music,books},incomplete/{tv,movies,music,books}}}
+sudo mkdir -p /data/{media/{tv,movies,music,books},downloads/{complete/{tv,movies,music,books},incomplete/{tv,movies,music,books}}} && \
 sudo chown -R 1000:1000 /data
 ```
-Then use `tree` to see the sctucture
+Use `tree` to see the sctucture
 ```
 tree /data
 ```
 
-
-sudo chmod -R a=,a+rX,u+w,g+w /data ? maybe no
-ls -ln /data ? mayb eno
 
 
 
