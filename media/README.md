@@ -1,10 +1,14 @@
 
 # General Setup #
-Signed it as root
-apt install sudo tree wget -y && apt update
-usermod -aG sudo `{user}`
+Sign in as root and install some helpful tools  
+`apt install sudo tree wget -y && apt update`
+asign your normal user to the sudo group
+`usermod -aG sudo` ```{user}``
 
+sign is as your normal user  
 signed in as `{user}`
+alternateive, you could open a command prompt and ssh into the machine  
+`ssh{user}@{IP}`
 
 nano /etc/network/interfaces
 
