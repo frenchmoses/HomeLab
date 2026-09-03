@@ -1,25 +1,38 @@
 
 # General Setup #
+
 Sign in as root and install some helpful tools  
-`apt install sudo tree wget -y && apt update`
+```
+apt install sudo tree wget -y && apt update
+```
 asign your normal user to the sudo group
-`usermod -aG sudo` ```{user}``
+```
+usermod -aG sudo {user}
+```
+sign is as your normal user. Alternatively, you could open a command prompt and ssh in  
+```
+ssh {user}@{IP}
+```
 
-sign is as your normal user  
-signed in as `{user}`
-alternateive, you could open a command prompt and ssh into the machine  
-`ssh{user}@{IP}`
+### [Optional] Assign a static IP ###
 
-nano /etc/network/interfaces
-
-    auto ens18
-    iface ens18 inet static
-        address 10.0.0.X
+1. Modify the interfaces file
+```
+sudo nano /etc/network/interfaces
+```
+2. Replace `dhcp` with `static` and add `address`, `netmask`, `gateway`, and `dns-nameservers`. Use an address and gateway than aligns with your IP. 
+```
+auto ens18
+iface ens18 inet static
+	address 10.0.0.202
 	netmask 255.255.255.0
-        gateway 10.0.0.1
-        dns-nameservers 1.1.1.1 8.8.8.8
-
-systemctl restart networking
+	gateway 10.0.0.1
+	dns-nameservers 1.1.1.1 8.8.8.8
+```
+3. Restart networking
+```
+sudo systemctl restart networking
+```
 
 # Install Docker #
 
